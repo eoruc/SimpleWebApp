@@ -1,6 +1,5 @@
 package eoruc.spring.spring5webapp.controllers;
 
-import eoruc.spring.spring5webapp.repositories.AuthorRepository;
 import eoruc.spring.spring5webapp.repositories.PublisherRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,9 +14,11 @@ public class PublisherController {
         this.publisherRepository = publisherRepository;
     }
 
-    @RequestMapping
+    @RequestMapping("/publishers")
     public String getPublishers(Model model){
+
         model.addAttribute("publishers", publisherRepository.findAll());
-        return "publishers";
+
+        return "publishers/list";
     }
 }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Spring Web App - Publishers</title>
+</head>
+<body>
+<h1>Publishers</h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Adress Line 1</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+  </tr>
+  <tr th:each="publisher : ${publishers}">
+    <td th:text="${publisher.name}">bookId</td>
+    <td th:text="${publisher.addressLine1}">bookTitle</td>
+    <td th:text="${publisher.city}">publisherName</td>
+    <td th:text="${publisher.state}">publisherName</td>
+    <td th:text="${publisher.zip}">publisherName</td>
+  </tr>
+</table>
+</body>
+</html>
